@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <!-- name代表的是类名，table代表的是表名 -->
+    <class name="pers.model.domain.Student" table="student">
+        <!-- name代表的是User类中的id属性，column代表的是user表中的主键id -->
+        <id name="id" type="java.lang.Integer" column="id" >
+            <!-- 主键生成策略 -->
+            <generator class="increment" />
+        </id>
+        <!-- 其他属性使用property标签映射 -->
+        <property name="name" type="java.lang.String" column="name" />
+        <property name="age" type="java.lang.Integer" column="age" />
+        <property name="email" type="java.lang.String" column="email" />
+    </class>
+</hibernate-mapping>

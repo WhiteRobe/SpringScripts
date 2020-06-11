@@ -18,11 +18,21 @@
                 </configuration>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <!--细粒度控制-->
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*hbm.xml</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
 
     <properties>
         <spring.version>5.2.7.RELEASE</spring.version>
         <log4j.version>2.13.3</log4j.version>
+        <hibernate.version>5.4.17.Final</hibernate.version>
     </properties>
 
     <dependencies>
@@ -105,6 +115,18 @@
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.5</version>
+        </dependency>
+
+        <!-- ORM -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${hibernate.version}</version>
         </dependency>
 
         <!-- 日志 -->

@@ -98,4 +98,5 @@ fabric.properties
 
 .idea/SpringScripts.iml
 .idea/modules.xml
+.idea/dataSources.xml
 target/
