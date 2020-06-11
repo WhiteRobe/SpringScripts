@@ -22,16 +22,11 @@
 
     <properties>
         <spring.version>5.2.7.RELEASE</spring.version>
+        <log4j.version>2.13.3</log4j.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.12</version>
-            <scope>provided</scope>
-        </dependency>
-
+        <!-- Spring Core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -58,7 +53,7 @@
             <artifactId>spring-expression</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
+        <!-- Spring AOP -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
@@ -70,6 +65,7 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <!-- Spring JDBC -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
@@ -80,13 +76,15 @@
             <artifactId>spring-tx</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!-- 测试 -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <!-- 单元测试 -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -102,11 +100,33 @@
             <version>8.0.20</version>
         </dependency>
 
+        <!-- DAO -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.5</version>
         </dependency>
+
+        <!-- 日志 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
+
+        <!-- Java语法增强 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+
 
     </dependencies>
 
