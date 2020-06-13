@@ -100,3 +100,4 @@ fabric.properties
 .idea/modules.xml
 .idea/dataSources.xml
 target/
+.idea/
