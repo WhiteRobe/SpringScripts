@@ -15,7 +15,21 @@
 
     <select id="getAllTeacher" resultMap="TeacherBeanMapper">SELECT * FROM teacher; </select>
     <select id="getById" parameterType="java.lang.Long" resultType="pers.model.domain.Teacher">
-        SELECT * FROM teacher WHERE id = #{id} or name = #{name}
+        SELECT * FROM teacher WHERE id = #{id}
+    </select>
+
+    <insert id="save" parameterType="pers.model.domain.Teacher">
+        INSERT INTO teacher(id, name, age, email) VALUES (#{id}, #{name}, #{age}, #{email})
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Integer"> DELETE FROM teacher WHERE id=#{id}</delete>
+
+    <update id="update" parameterType="pers.model.domain.Teacher">
+        UPDATE teacher SET name=#{name}, age=#{age}, email=#{email} WHERE id=#{id};
+    </update>
+
+    <select id="getByIdOrName" parameterType="map" resultType="pers.model.domain.Teacher">
+        SELECT * FROM teacher WHERE id = #{id} or name=#{name}
     </select>
 
 </mapper>

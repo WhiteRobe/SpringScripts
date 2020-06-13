@@ -75,6 +75,5 @@ public class HibernateTest {
 
         // 6.提交事务
         transaction.commit();
-
     }
 }
