@@ -33,7 +33,7 @@
     <properties>
         <spring.version>5.2.7.RELEASE</spring.version>
         <log4j.version>2.13.3</log4j.version>
-        <hibernate.version>5.4.17.Final</hibernate.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
     </properties>
 
     <dependencies>
